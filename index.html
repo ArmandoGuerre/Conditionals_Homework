@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 class="final"> </h1>
+<body>
+    <script> 
+    let num1_string = prompt("Enter a number");
+    num1 = parseInt(num1_string)
+ 
+   let op = prompt("Enter an operator: + - * /");
+
+    let num2_string = prompt("Enter a second number");
+   num2 = parseInt(num2_string)
+    
+    var sum = (+num1 + +num2);
+    var sub = (num1 - num2);
+    var mulp = (num1 * num2);
+    var div = (num1 / num2);
+
+if(!(isNaN(num1&&num2))){
+
+if (op == "+") {
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = num1+ " " +op+ " " +num2+ " = " +sum+ " "
+} else if (op == "-") {
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = num1+ " " +op+ " " +num2+ " = " +sub+ " "
+} else if (op == "*") {
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = num1+ " " +op+ " " +num2+ " = " +mulp+ " "
+} else if (op == "/") {
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = num1+ " " +op+ " " +num2+ " = " +div+ " "
+} else { 
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = "PLEASE INPUT A VALID OPERATOR SUCH AS +, -, *, / "
+}
+} else{
+    var classFinal = document.querySelector(".final");
+    classFinal.innerText = "PLEASE INPUT A VALID INTEGERS."
+   }
+    </script>
+</body>
+</html>
+
+
